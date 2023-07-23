@@ -1,0 +1,350 @@
+.inicio-bg
+    height: 830px
+    position: relative
+
+.inicio-bg:before
+    content: ''
+    display: block
+    position: absolute
+    background-image: linear-gradient(to bottom, rgb(6, 18, 30, 0.1), #000000ca), url("../img/antique-cafe-bg-01.jpg")
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    background-size: cover
+    background-position: 50% 0
+    background-repeat: no-repeat
+
+.header
+    position: fixed
+    top: 0
+    display: flex
+    align-items: center
+    justify-content: right
+    width: 100%
+    padding: 0 40px
+    height: 70px
+    transition: .5s
+
+    &-nav
+        display: flex
+        align-items: center
+        gap: 50px
+
+        a
+            font-size: 25px
+            color: #b76c26
+            transition: .3s
+
+            &:hover
+                border-bottom: 2px solid #b76c26
+
+@media screen and (max-width:487px)
+    .header-nav a
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        font-size: 18px
+
+@media screen and (max-width:409px)
+    .header-nav a
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        font-size: 15px
+
+.inicio-conteudo
+    width: 100%
+    max-width: 75em
+    margin: 0 auto
+    height: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 120px 0
+
+    .inicio-titulo
+        background-color: #000000b3
+        padding: 40px 40px
+        width: 26em
+        text-align: center
+        margin-bottom: 25px
+
+        h1
+            color: #fff
+            font-size: 35px
+            margin-bottom: 10px
+
+        p
+            color: #b76c26
+            font-size: 22px
+
+    .inicio-sobre
+        background-color: #000000b3
+        padding: 40px 40px
+        width: 26em
+        text-align: center
+        margin-bottom: 25px
+
+        p
+            color: #fff
+            font-size: 18px
+            line-height: 110%
+            letter-spacing: 2px
+
+        a
+            color: #ffed75
+
+            &:hover
+                color: #74cafc
+
+    .inicio-button
+        background-color: #000000b3
+        padding: 35px 35px
+        width: 17em
+        border-radius: 5px
+        text-align: center
+
+        a
+            color: #b76c26
+            font-weight: bold
+            font-size: 18px
+            width: 100%
+            height: 100%
+            display: flex
+            gap: 5px
+            align-items: center
+            justify-content: center
+
+        .iconCafe
+            font-size: 23px
+
+        a:hover
+            color: #dcdcdc
+
+.menu
+    width: 100%
+    height: auto
+    text-align: center
+    padding: 90px 0
+
+    h1
+        font-size: 35px
+        margin-bottom: 60px
+        color: #fff
+
+    .menu-conteudo
+        width: 100%
+        max-width: 75em
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        gap: 35px
+        align-items: center
+        justify-content: center
+
+        .menu-conteudo-card
+            display: flex
+            gap: 30px
+            flex-direction: column
+            width: 30em
+            background-color: #3b3229
+            padding: 20px 20px
+
+            .card
+                display: flex
+                gap: 15px
+                align-items: center
+                overflow: hidden
+
+            .card .img img
+                width: 100%
+                transition: .4s
+
+                &:hover
+                    transform: scale(1.05)
+                    z-index: 1
+
+            .description
+                display: flex
+                flex-direction: column
+                text-align: left
+                gap: 20px
+
+                span
+                    font-size: 23px
+                    color: #fff
+
+                .cafe-nome
+                    color: #c88f5a
+        .colum2
+            align-items: flex-end
+            text-align: center
+
+            span
+                text-align: right
+
+@media screen and (max-width:409px)
+    .card .img img
+        width: 20px
+
+.sobre
+    width: 100%
+    margin-top: 50px
+
+    .sobre-conteudo
+        width: 100%
+        max-width: 75em
+        margin: 0 auto
+
+        .card-sobre
+            min-width: 80%
+            max-width: 65em
+            margin: 0 auto
+            background-color: #262626
+            padding: 30px
+            border-radius: 20px
+
+            h1
+                font-size: 33px
+                color: #00c194
+                margin-bottom: 20px
+
+            p
+                font-size: 18px
+                margin-bottom: 20px
+                color: #fff
+
+            .button button
+                display: flex
+                align-items: center
+                gap: 10px
+                background-color: #00c194
+                border: none
+                padding: 10px 20px
+                font-size: 18px
+                transition: .4s
+                color: #fff
+
+                a
+                    color: #fff
+
+                .contatoIcon
+                    font-size: 22px
+
+                &:hover
+                    background-color: #00a57f
+                    border-radius: 8px
+
+.contato
+    width: 100%
+    margin-top: 150px
+
+    .contato-conteudo
+        width: 100%
+        max-width: 75em
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        gap: 30px
+        align-items: center
+        justify-content: center
+
+        .contato-card-escrita
+            width: 32em
+            height: 23em
+            display: flex
+            flex-direction: column
+            justify-content: center
+            background-color: #262626
+            padding: 30px
+            border-radius: 20px
+
+            h1
+                font-size: 33px
+                color: #00c194
+                margin-bottom: 20px
+
+            p
+                color: #fff
+
+            span
+                color: #fff
+
+            .contatos
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                margin-bottom: 20px
+                margin-top: 20px
+
+            .colorGreen
+                color: #00c194
+
+            .buttonContato
+                width: 100%
+                display: flex
+                align-content: center
+                justify-content: center
+
+            .buttonContato button
+                display: flex
+                align-items: center
+                gap: 10px
+                background-color: #00c194
+                border: none
+                color: #fff
+                padding: 10px 20px
+                font-size: 18px
+                transition: .4s
+
+                &:hover
+                    background-color: #00a57f
+                    border-radius: 8px
+
+        .contato-card-form
+            width: 32em
+            height: 23em
+            background-color: #000000b3
+            padding: 30px
+            border-radius: 20px
+            overflow: hidden
+
+            form
+                display: flex
+                gap: 10px
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                width: 100%
+
+                input
+                    background-color: transparent
+                    border: none
+                    border-bottom: 1px solid #c88f5a
+                    width: 100%
+                    height: 50px
+                    font-size: 18px
+                    color: #fff
+
+                textarea
+                    background-color: transparent
+                    border: none
+                    border-bottom: 1px solid #c88f5a
+                    width: 100%
+                    height: 130px
+                    font-size: 18px
+                    color: #fff
+
+                .enviar
+                    background-color: transparent
+                    color: #fff
+                    font-size: 18px
+                    border: none
+                    margin-top: 20px
+                    transition: .4s
+
+                    &:hover
+                        color: #c88f5a

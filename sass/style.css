@@ -1,0 +1,414 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.inicio-bg {
+  height: 830px;
+  position: relative;
+}
+
+.inicio-bg:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), rgba(0, 0, 0, 0.7921568627)), url("../img/antique-cafe-bg-01.jpg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  padding: 0 40px;
+  height: 70px;
+  transition: 0.5s;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.header-nav a {
+  font-size: 25px;
+  color: #b76c26;
+  transition: 0.3s;
+}
+.header-nav a:hover {
+  border-bottom: 2px solid #b76c26;
+}
+
+@media screen and (max-width: 487px) {
+  .header-nav a {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 409px) {
+  .header-nav a {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+}
+.inicio-conteudo {
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+}
+.inicio-conteudo .inicio-titulo {
+  background-color: rgba(0, 0, 0, 0.7019607843);
+  padding: 40px 40px;
+  width: 26em;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.inicio-conteudo .inicio-titulo h1 {
+  color: #fff;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.inicio-conteudo .inicio-titulo p {
+  color: #b76c26;
+  font-size: 22px;
+}
+.inicio-conteudo .inicio-sobre {
+  background-color: rgba(0, 0, 0, 0.7019607843);
+  padding: 40px 40px;
+  width: 26em;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.inicio-conteudo .inicio-sobre p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 2px;
+}
+.inicio-conteudo .inicio-sobre a {
+  color: #ffed75;
+}
+.inicio-conteudo .inicio-sobre a:hover {
+  color: #74cafc;
+}
+.inicio-conteudo .inicio-button {
+  background-color: rgba(0, 0, 0, 0.7019607843);
+  padding: 35px 35px;
+  width: 17em;
+  border-radius: 5px;
+  text-align: center;
+}
+.inicio-conteudo .inicio-button a {
+  color: #b76c26;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.inicio-conteudo .inicio-button .iconCafe {
+  font-size: 23px;
+}
+.inicio-conteudo .inicio-button a:hover {
+  color: #dcdcdc;
+}
+
+.menu {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 90px 0;
+}
+.menu h1 {
+  font-size: 35px;
+  margin-bottom: 60px;
+  color: #fff;
+}
+.menu .menu-conteudo {
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+}
+.menu .menu-conteudo .menu-conteudo-card {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  width: 30em;
+  background-color: #3b3229;
+  padding: 20px 20px;
+}
+.menu .menu-conteudo .menu-conteudo-card .card {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  overflow: hidden;
+}
+.menu .menu-conteudo .menu-conteudo-card .card .img img {
+  width: 100%;
+  transition: 0.4s;
+}
+.menu .menu-conteudo .menu-conteudo-card .card .img img:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+.menu .menu-conteudo .menu-conteudo-card .description {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+}
+.menu .menu-conteudo .menu-conteudo-card .description span {
+  font-size: 23px;
+  color: #fff;
+}
+.menu .menu-conteudo .menu-conteudo-card .description .cafe-nome {
+  color: #c88f5a;
+}
+.menu .menu-conteudo .colum2 {
+  align-items: flex-end;
+  text-align: center;
+}
+.menu .menu-conteudo .colum2 span {
+  text-align: right;
+}
+
+@media screen and (max-width: 409px) {
+  .card .img img {
+    width: 20px;
+  }
+}
+.sobre {
+  width: 100%;
+  margin-top: 50px;
+}
+.sobre .sobre-conteudo {
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto;
+}
+.sobre .sobre-conteudo .card-sobre {
+  min-width: 80%;
+  max-width: 65em;
+  margin: 0 auto;
+  background-color: #262626;
+  padding: 30px;
+  border-radius: 20px;
+}
+.sobre .sobre-conteudo .card-sobre h1 {
+  font-size: 33px;
+  color: #00c194;
+  margin-bottom: 20px;
+}
+.sobre .sobre-conteudo .card-sobre p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.sobre .sobre-conteudo .card-sobre .button button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #00c194;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: 0.4s;
+  color: #fff;
+}
+.sobre .sobre-conteudo .card-sobre .button button a {
+  color: #fff;
+}
+.sobre .sobre-conteudo .card-sobre .button button .contatoIcon {
+  font-size: 22px;
+}
+.sobre .sobre-conteudo .card-sobre .button button:hover {
+  background-color: #00a57f;
+  border-radius: 8px;
+}
+
+.contato {
+  width: 100%;
+  margin-top: 150px;
+}
+.contato .contato-conteudo {
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.contato .contato-conteudo .contato-card-escrita {
+  width: 32em;
+  height: 23em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #262626;
+  padding: 30px;
+  border-radius: 20px;
+}
+.contato .contato-conteudo .contato-card-escrita h1 {
+  font-size: 33px;
+  color: #00c194;
+  margin-bottom: 20px;
+}
+.contato .contato-conteudo .contato-card-escrita p {
+  color: #fff;
+}
+.contato .contato-conteudo .contato-card-escrita span {
+  color: #fff;
+}
+.contato .contato-conteudo .contato-card-escrita .contatos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.contato .contato-conteudo .contato-card-escrita .colorGreen {
+  color: #00c194;
+}
+.contato .contato-conteudo .contato-card-escrita .buttonContato {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.contato .contato-conteudo .contato-card-escrita .buttonContato button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #00c194;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: 0.4s;
+}
+.contato .contato-conteudo .contato-card-escrita .buttonContato button:hover {
+  background-color: #00a57f;
+  border-radius: 8px;
+}
+.contato .contato-conteudo .contato-card-form {
+  width: 32em;
+  height: 23em;
+  background-color: rgba(0, 0, 0, 0.7019607843);
+  padding: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.contato .contato-conteudo .contato-card-form form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.contato .contato-conteudo .contato-card-form form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #c88f5a;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+.contato .contato-conteudo .contato-card-form form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #c88f5a;
+  width: 100%;
+  height: 130px;
+  font-size: 18px;
+  color: #fff;
+}
+.contato .contato-conteudo .contato-card-form form .enviar {
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  margin-top: 20px;
+  transition: 0.4s;
+}
+.contato .contato-conteudo .contato-card-form form .enviar:hover {
+  color: #c88f5a;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9058823529);
+}
+
+body, html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 1px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #06121e;
+  border-radius: 10px;
+}
+
+.scroll {
+  background-color: rgba(0, 0, 0, 0.7803921569);
+}/*# sourceMappingURL=style.css.map */
