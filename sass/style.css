@@ -34,6 +34,7 @@
   height: 60px;
   padding: 0 40px;
   background-color: rgba(0, 0, 0, 0.7803921569);
+  z-index: 5;
 }
 .header-nav {
   display: flex;
