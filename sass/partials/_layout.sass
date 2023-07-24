@@ -18,14 +18,13 @@
 
 .header
     position: fixed
-    top: 0
     display: flex
     align-items: center
     justify-content: right
     width: 100%
+    height: 60px
     padding: 0 40px
-    height: 70px
-    transition: .5s
+    background-color: #000000c7
 
     &-nav
         display: flex
@@ -36,9 +35,20 @@
             font-size: 25px
             color: #b76c26
             transition: .3s
+            position: relative
 
-            &:hover
-                border-bottom: 2px solid #b76c26
+    &-nav a::after
+        content: ""
+        height: 2px
+        background-color: #b76c26
+        width: 0
+        position: absolute
+        bottom: -5px
+        left: 0
+        transition: width 0.3s
+
+.header-nav a:hover::after
+    width: 100%
 
 @media screen and (max-width:487px)
     .header-nav a
@@ -106,24 +116,21 @@
         width: 17em
         border-radius: 5px
         text-align: center
-
-        a
-            color: #b76c26
-            font-weight: bold
-            font-size: 18px
-            width: 100%
-            height: 100%
-            display: flex
-            gap: 5px
-            align-items: center
-            justify-content: center
+        color: #b76c26
+        font-weight: bold
+        font-size: 18px
+        width: 17em
+        display: flex
+        gap: 5px
+        align-items: center
+        justify-content: center
+        transition: .4s
 
         .iconCafe
             font-size: 23px
 
-        a:hover
-            color: #dcdcdc
-
+    .inicio-button:hover
+        color: #dcdcdc
 .menu
     width: 100%
     height: auto
@@ -152,6 +159,7 @@
             width: 30em
             background-color: #3b3229
             padding: 20px 20px
+            border-radius: 10px
 
             .card
                 display: flex
@@ -159,12 +167,17 @@
                 align-items: center
                 overflow: hidden
 
+            .img
+                width: 130px
+                overflow: hidden
+
             .card .img img
                 width: 100%
                 transition: .4s
 
                 &:hover
-                    transform: scale(1.05)
+                    width: 100%
+                    transform: scale(1.2)
                     z-index: 1
 
             .description
@@ -272,6 +285,7 @@
 
             span
                 color: #fff
+                margin-bottom: 10px
 
             .contatos
                 display: flex

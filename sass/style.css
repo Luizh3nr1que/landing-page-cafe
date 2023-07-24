@@ -27,14 +27,13 @@
 
 .header {
   position: fixed;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: right;
   width: 100%;
+  height: 60px;
   padding: 0 40px;
-  height: 70px;
-  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.7803921569);
 }
 .header-nav {
   display: flex;
@@ -45,9 +44,21 @@
   font-size: 25px;
   color: #b76c26;
   transition: 0.3s;
+  position: relative;
 }
-.header-nav a:hover {
-  border-bottom: 2px solid #b76c26;
+.header-nav a::after {
+  content: "";
+  height: 2px;
+  background-color: #b76c26;
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.header-nav a:hover::after {
+  width: 100%;
 }
 
 @media screen and (max-width: 487px) {
@@ -118,22 +129,20 @@
   width: 17em;
   border-radius: 5px;
   text-align: center;
-}
-.inicio-conteudo .inicio-button a {
   color: #b76c26;
   font-weight: bold;
   font-size: 18px;
-  width: 100%;
-  height: 100%;
+  width: 17em;
   display: flex;
   gap: 5px;
   align-items: center;
   justify-content: center;
+  transition: 0.4s;
 }
 .inicio-conteudo .inicio-button .iconCafe {
   font-size: 23px;
 }
-.inicio-conteudo .inicio-button a:hover {
+.inicio-conteudo .inicio-button:hover {
   color: #dcdcdc;
 }
 
@@ -165,6 +174,7 @@
   width: 30em;
   background-color: #3b3229;
   padding: 20px 20px;
+  border-radius: 10px;
 }
 .menu .menu-conteudo .menu-conteudo-card .card {
   display: flex;
@@ -172,12 +182,17 @@
   align-items: center;
   overflow: hidden;
 }
+.menu .menu-conteudo .menu-conteudo-card .img {
+  width: 130px;
+  overflow: hidden;
+}
 .menu .menu-conteudo .menu-conteudo-card .card .img img {
   width: 100%;
   transition: 0.4s;
 }
 .menu .menu-conteudo .menu-conteudo-card .card .img img:hover {
-  transform: scale(1.05);
+  width: 100%;
+  transform: scale(1.2);
   z-index: 1;
 }
 .menu .menu-conteudo .menu-conteudo-card .description {
@@ -289,6 +304,7 @@
 }
 .contato .contato-conteudo .contato-card-escrita span {
   color: #fff;
+  margin-bottom: 10px;
 }
 .contato .contato-conteudo .contato-card-escrita .contatos {
   display: flex;
@@ -384,10 +400,6 @@ button {
   cursor: pointer;
 }
 
-svg {
-  width: 100%;
-}
-
 img {
   width: 100%;
 }
@@ -405,10 +417,6 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #06121e;
+  background: #03060a;
   border-radius: 10px;
-}
-
-.scroll {
-  background-color: rgba(0, 0, 0, 0.7803921569);
 }/*# sourceMappingURL=style.css.map */
