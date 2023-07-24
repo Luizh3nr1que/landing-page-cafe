@@ -50,6 +50,11 @@
 .header-nav a:hover::after
     width: 100%
 
+.menuMobile
+    color: #fff
+    font-size: 40px
+    display: none
+
 @media screen and (max-width:487px)
     .header-nav a
         justify-content: center
@@ -57,12 +62,12 @@
         flex-wrap: wrap
         font-size: 18px
 
-@media screen and (max-width:409px)
-    .header-nav a
-        justify-content: center
-        align-items: center
-        flex-wrap: wrap
-        font-size: 15px
+@media screen and (max-width:581px)
+    .header-nav
+        display: none
+
+    .menuMobile
+        display: block !important
 
 .inicio-conteudo
     width: 100%
